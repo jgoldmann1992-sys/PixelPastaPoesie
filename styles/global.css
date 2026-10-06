@@ -1,0 +1,169 @@
+:root {
+  --color-beige: #FBF7EB;
+  --color-red: #C41434;
+  --color-green: #00AB3F;
+  --color-blue: #459CCC;
+  --color-pink: #FF4D7C;
+  --color-orange: #FF7C2F;
+  --color-grey: #282828;
+
+  --typeface-display: "Bagel Fat One";
+  --typeface-body: "Space Grotesk";
+
+  --font-size-display: 3.8125rem; /* 61px */
+  --font-size-h1: 3.0625rem; /* 49px */
+  --font-size-h2: 2.4375rem; /* 39px */
+  --font-size-h3: 1.9375rem; /* 31px */
+
+  --font-size-large: 1.125rem; /* 18px */
+  --font-size-regular: 1rem; /* 16px */
+  --font-size-small: 0.875rem; /* 14px */
+
+  --padding-global: 2rem; /* basic 32px*/
+}
+
+@font-face {
+  font-family: "Bagel Fat One";
+  src: url("../assets/typefaces/BagelFatOne-Regular.ttf");}
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("../assets/typefaces/SpaceGrotesk-VariableFont_wght.ttf");
+}
+
+body {
+  background-color: var(--color-beige);
+  color: var(--color-grey);
+  font-family: var(--typeface-body);
+}
+
+/* Klassen */
+
+.heading {
+  font-family: var(--typeface-display);
+  max-width: calc(100dvw - (var(--padding-global) * 2));
+  text-align: left;
+}
+
+.heading > span {
+  font-family: "Space Grotesk";
+  font-size: 1rem;
+}
+
+.heading-size-h1 {
+  font-size: var(--font-size-h1);
+  line-height: 100%;
+  display: inline-block;
+  width: 10ch;
+}
+
+.text {
+  font-family: var(--typeface-body);
+  font-size: var(--font-size-regular);
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.image-bg {
+  width: 100%;
+  flex: none;
+  background-image: url("../assets/img/Hintergrund2.webp");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100% auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.myimage {
+  width: 229px;
+  height: 274px;
+  border-radius: 12px;
+  margin-bottom: -50px;
+}
+.heading-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-left: var(--padding-global);
+  padding-right: var(--padding-global);
+}
+main {
+  background: beige;
+  flex: 2 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items:stretch;
+}
+
+nav {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  overflow-y: clip;
+}
+
+.button {
+  background: orange;
+  border-radius: 50px 50px 0 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem 7rem 1rem;
+  font-size: 2.4375rem;
+  text-decoration: none;
+  font-family: Bagel Fat One;
+  color: var(--color-grey);
+  writing-mode: sideways-lr;
+  border: solid 1px beige;
+  border-bottom: none;
+  transform: translateY(10%);
+  transition: all;
+  transition-duration: 0.5s;
+}
+
+.button:nth-of-type(1) { background: var(--color-orange); }
+.button:nth-of-type(1):hover {background: color-mix(in srgb, var(--color-orange) 80%, white 20%); }
+
+.button:nth-of-type(2) { background: var(--color-blue); }
+.button:nth-of-type(2):hover {background: color-mix(in srgb, var(--color-blue) 80%, white 20%); }
+
+.button:nth-of-type(3) { background: var(--color-pink); }
+.button:nth-of-type(3):hover {background: color-mix(in srgb, var(--color-pink) 80%, white 20%); }
+
+.button:nth-of-type(4) { background: var(--color-green); }
+.button:nth-of-type(4):hover {background: color-mix(in srgb, var(--color-green) 80%, white 20%); }
+
+.button:hover {
+  transform: translateY(0%);
+  padding-bottom: 2rem;
+}
+
+.button-circle {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background: white;
+  border-radius: 50%;
+}
+
+header {
+  background: var(--color-beige);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  padding-bottom: 2rem;
+  max-height: 50dvh; /* max Größe begrenzt */
+}
+
+main {
+  background: var(--color-beige);
+  flex: 2 0 auto;
+}
